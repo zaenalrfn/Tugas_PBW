@@ -219,24 +219,31 @@ header .navbar {
 	top: -160px;
 }
 .swiper {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+  width: 600px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-.item_wrapper {
-	width: 600px;
-	height: 400px;
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 600px;
+  height: 400px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .swiper-pagination-bullet {
-	width: 10px;
-	height: 10px;
+	width: 15px;
+	height: 15px;
+	background-color: #FFB548;
 	border: 2px solid #fff;
 	border-radius: 50%;
-	background-color: #FFB548;
 }
-.item_prev, .item_next {
+.swiper-button-prev, .swiper-button-next {
 	color: #FFB548;
 }
 /*
@@ -632,7 +639,7 @@ BAGIAN RESPONSIVE
  		padding: 10px 20px;
  		border-radius: 4px;
  	}
-	.item_wrapper {
+	.swiper-slide, .swiper {
 		width: 500px;
 		height: 400px;
 	}
@@ -650,7 +657,7 @@ BAGIAN RESPONSIVE
  		flex-direction: column;
  		align-items: center;
  	}
- 	.item_wrapper {
+ 	.swiper-slide, .swiper {
  		margin-top: -9rem;
  		width: 690px;
 		height: 400px;
@@ -705,10 +712,16 @@ BAGIAN RESPONSIVE
 	.scrollJumbotron {
 		margin-top: 230px;
 	}
-	.item_wrapper {
+	.swiper-slide, .swiper {
  		margin-top: -4rem;
  		width: 550px;
 		height: 400px;
+ 	}
+ 	.swiper-pagination {
+ 		top: 410px;
+ 	}
+ 	.swiper-button-prev, .swiper-button-next {
+ 		margin-top: -5rem;
  	}
  	.titleAbout h1,.subFeatures h1,.Quotes_1 h1,.titleSubscribe h1,.subSyst_req h1 {
 		font-size: 54px;
@@ -771,9 +784,12 @@ BAGIAN RESPONSIVE
 		font-size: 45px;
 	}
 	/* BAGIAN MAIN CONTENT */
-	.item_wrapper {
+	.swiper-slide, .swiper {
  		width: 340px;
 		height: 400px;
+ 	}
+ 	.swiper-button-prev, .swiper-button-next {
+ 		display: none;
  	}
  	.titleAbout h1,.subFeatures h1,.Quotes_1 h1,.titleSubscribe h1,.subSyst_req h1 {
  		font-size: 35px;
