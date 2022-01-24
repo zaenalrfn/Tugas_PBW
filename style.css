@@ -185,8 +185,72 @@ header .navbar {
 	font-size: 12px;
 	color: #fff;
 }
-
-
+.login, .signup {
+	width: 100%; 
+	height:100vh; 
+	position: fixed; 
+	top: 0; 
+	display: flex; 
+	justify-content: center;
+	align-items: center; 
+	color: #fff; 
+	background-color:rgba(0, 0, 0, 0.5); 
+	z-index: 9999;
+	display: none;
+}
+.boxLogin, .boxsignUp {
+	width: 400px;  
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 20px 10px;
+	text-align: center;
+	border-radius: 4px;
+	position: relative;
+}
+.animaLogin, .animaSignUp {
+	animation: animalogin .3s forwards;
+}
+@keyframes animalogin {
+	0% {
+		margin-top: -50px;
+	}
+	100% {
+		margin-top: 0px;
+	}
+}
+.boxLogin h1, .boxsignUp h1 {
+	position: absolute;
+	right: 10px;
+	top: -5px;
+	cursor: pointer;
+	transform: rotate(45deg);
+}
+.boxLogin h1:hover, .boxsignUp h1:hover {
+	color: #F3AF34;
+}
+.boxLogin input, #login, .boxsignUp input,#login {
+	display: block;
+	margin: 10px auto;
+	width: 100%;
+	padding: 10px 0;
+	border: none;
+	border-radius: 4px;
+	text-align: center;
+	font-size: 15px;
+}
+.boxLogin #login, .boxsignUp #login {
+	background: linear-gradient(#FFB548, #F3AF34);
+	cursor: pointer;
+}
+.boxLogin input:focus, .boxsignUp input:focus {
+	outline: none;
+}
+.boxLogin input:focus::placeholder, .boxsignUp input:focus::placeholder {
+	color: #F3AF34;
+}
+.boxLogin a, .boxsignUp a  {
+	color: #F3AF34;
+	text-decoration: underline;
+}
 /*
 ================================
  BAGIAN MAIN CONTENT 
@@ -782,6 +846,9 @@ BAGIAN RESPONSIVE
 	/* BAGIAN JUMBOTRON */
 	.titleJumboton h1 {
 		font-size: 45px;
+	}
+	.boxLogin, .boxsignUp {
+		margin: 0 10px;
 	}
 	/* BAGIAN MAIN CONTENT */
 	.swiper-slide, .swiper {

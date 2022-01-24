@@ -27,13 +27,45 @@ navbar_a_active.forEach((el) => {
     el.classList.add("activeLi");
   });
 });
+
+// bagian popup login dan sign up
+var signupBox = document.querySelector('.signup'),
+loginBox = document.querySelector('.login'),
+bodyBox = document.querySelector('body'),
+boxsignUp = document.querySelector('.boxsignUp'),
+boxLogin = document.querySelector('.boxLogin')
+
+function login() {
+  loginBox.style.display = 'flex'
+  bodyBox.style.overflowY = 'hidden'
+  boxLogin.classList.add('animaLogin')
+  setTimeout(function(){
+    boxLogin.classList.remove('animaLogin')
+  }, 500)
+}
+function tutupLogin() {
+  loginBox.style.display = ''
+  bodyBox.style.overflowY = ''
+}
+function signup() {
+  signupBox.style.display = 'flex'
+  bodyBox.style.overflowY = 'hidden'
+  boxsignUp.classList.add('animaSignUp')
+  setTimeout(function(){
+    boxsignUp.classList.remove('animaLogin')
+  }, 500)
+
+}
+function tutupSignup() {
+  signupBox.style.display = ''
+  bodyBox.style.overflowY = ''
+}
 // animasi gsap
 gsap.from('header', {y:-50, opacity: 0})
 gsap.from('.titleJumboton', {x:-150, opacity: 0, duration: 1, ease: " power4.out"})
 gsap.from('.buttonJumbotron button', {x:-150, opacity: 0, duration: 1.5})
 
-
-
+// swiper js
  var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
         grabCursor: true,

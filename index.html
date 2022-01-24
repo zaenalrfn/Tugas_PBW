@@ -31,15 +31,15 @@
 					<li><a href="#">CONTACT</a></li>
 					<li><a href="#">ABOUT ME</a></li>
 					<div class="signUpLogin_1">
-						<a href="#">SIGN UP</a>
-						<a href="#">LOGIN</a>
+						<a href="#" onclick="signup()">SIGN UP</a>
+						<a href="#" onclick="login()">LOGIN</a>
 					</div>
 				</ul>
 			</nav>
 		</div>
 		<div class="signUpLogin">
-			<a href="#">SIGN UP</a>
-			<a href="#">LOGIN</a>
+			<a href="#" onclick="signup()">SIGN UP</a>
+			<a href="#" onclick="login()">LOGIN</a>
 		</div>
 		<div class="hamberger">
 			<input type="checkbox"/>
@@ -66,6 +66,27 @@
 			<svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M21.5786 1.83362H1.32422L11.338 10.0027L21.5786 1.83362Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 			</svg>
+		</div>
+		<!-- BAGIAN POPUP LOGIN SIGNUP -->
+		<div class="login">
+			<div class="boxLogin">
+				<h1 onclick="tutupLogin()">+</h1>
+				<h2>Login</h2>
+				<input type="email" name="emailLogin" placeholder="Email">
+				<input type="password" name="passwordLogin" placeholder="Password">
+				<button id="login">Login</button>
+				<p><a href="#">Create account</a> or <a href="#">reset password</a></p>
+			</div>
+		</div>
+		<div class="signup">
+			<div class="boxsignUp">
+				<h1 onclick="tutupSignup()">+</h1>
+				<h2>Sign Up</h2>
+				<input type="text" name="nameSignup" placeholder="Name">
+				<input type="email" name="emailSignup" placeholder="Email">
+				<input type="password" name="passwordSignup" placeholder="Password">
+				<button id="login">Sign Up</button>
+			</div>
 		</div>
 	</div>
 
